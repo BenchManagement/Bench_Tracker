@@ -1,0 +1,76 @@
+﻿employeeName,activityCategory,activityDetails,benchTime,endDate,region,designation,level,managerID
+"Jerome, Kevin",Honing existing skills,Shadowing,292,08-Mar-24,ATL,Consultant ,Intermediate,manager1@plato.com
+"Natividad, Alfredo",Internal Project/Assignment,investigating TOSCA program development,7,01-Mar-24,NO,Associate Manager,Intermediate,manager2@plato.com
+"Bhumar, Rohit",Learning a new technology,Inroduction to UI/UX ,17,01-Mar-24,NO,Manager,Senior,manager3@plato.com
+"Ruthala, Raviteja",Taking up a course,Dovico,12,01-Mar-24,AB,Senior Consultant,Senior,manager4@plato.com
+"Saxena, Priya",Learning a new technology,"Working on a MOCK project with assigning roles/responsibilities, developing Use cases,  user stories, creating Test plan, test cases and finally automating using Selenium BDD",35,01-Mar-24,BC,Senior Consultant,Senior,manager5@plato.com
+"Lee, Jackson",Internal Project/Assignment,"Udemy courses analysis, PLATO CoE certificates",6,05-Mar-24,ATL,Senior Consultant,Senior,manager1@plato.com
+"Nachiappan, Annamalai",Internal Project/Assignment,Dovico,22,08-Mar-24,ON,Consultant,Intermediate,manager2@plato.com
+"Shaik, Asadullah",Learning a new technology,"Udemy courses analysis, PLATO CoE certificates",6,08-Mar-24,ATL,Manager,Senior,manager3@plato.com
+"Nagarkar, Harshala",Internal Project/Assignment,Undergoing Salesforce trainings as self-study to prepare for Salesforce certification. Also working on internal activity to update- PLATO website contents.,12,29-Feb-24,ATL,Consultant,Senior,manager4@plato.com
+"Mohamed, Reham",Internal Project/Assignment,Leading the Mock A11y Project 2 Starting on 20Feb. Starting with Mock A11y Project on 28Feb,17,01-Mar-24,AB,Consultant,Senior,manager5@plato.com
+"Reddy, Nishu",Honing existing skills,Working on Udemy Course - pmp-certification-exam-prep-course-pmbok-6th-edition/,41,08-Mar-24,AB,Senior Consultant,Senior,manager1@plato.com
+"Crampatanta, Richelle",Learning a new technology,Internal Project: Dovico and Resume Builder.,32,11-Mar-24,AB,Senior Consultant,Senior,manager2@plato.com
+"Madhusudhan, Saranya",Learning a new technology,"Test Lead for PLATO ERP project, PowerBI Introductory course",22,01-Mar-24,ATL,Senior Consultant,Senior,manager3@plato.com
+"Khichi, Dikshita",Internal Project/Assignment,On Accelerated Software Testing (Mar 4 - Apr 5),12,01-Mar-24,ON,Consultant,Intermediate,manager4@plato.com
+"Pedapati, Roja",Learning a new technology,"API Automation Tools Analysis , POC on BDD-Cucumber/Java ",12,01-Mar-24,ATL,Associate Consultant,Junior,manager5@plato.com
+"Gaffney, Riley",Learning a new technology,Dovico project - 2 weeks,112,08-Mar-24,AB,Senior Consultant,Intermediate,manager1@plato.com
+"Ismaila, Racheal",Internal Project/Assignment,Assisting Abhishek & Amrit with training service provider's,2,01-Mar-24,NO,Consultant,Intermediate,manager2@plato.com
+"Shivanna, Jeevitha",Honing existing skills,Working wth training vendors to compare site.,27,01-Mar-24,NO,Senior Consultant,Senior,manager3@plato.com
+"Khayati, Khayati",Internal Project/Assignment,Helping with bench management/activities,12,01-Mar-24,BC,Apprentice,Apprentice,manager4@plato.com
+"McCormick, Geoff",Internal Project/Assignment,PLATO website content review.,85,01-Mar-24,ON,Manager,Lead,manager5@plato.com
+"Sinha, Monika",Internal Project/Assignment,Working Automation CoE on courses.,41,01-Mar-24,BC,Associate Consultant,Intermediate,manager1@plato.com
+"Haug, Gabriel",Internal Project/Assignment,Helping with Mock project for AI (will find out more Friday),15,01-Mar-24,AB,Apprentice,Intern,manager2@plato.com
+"Zaidie, Nofar",Taking up a certification,Karate Automation Training,41,01-Mar-24,AB,Senior Consultant,Senior,manager3@plato.com
+"Tulashyam, Vikas",Taking up a certification,"Working on A11Y mock project 3 through the directive from Ravi Modi,",46,01-Mar-24,AB,Senior Consultant,Senior,manager4@plato.com
+"Boreddy, Vishnu",Internal Project/Assignment,Odoo Sales ERP Testing Mock Project 3 and PLATO Content Review through the directive from Harshala Nagarkar.  Continuing test automation work for Resume Builder web application in Tricentis Tosca Commander.,12,01-Mar-24,SK,Senior Consultant,Senior,manager5@plato.com
+"Gaikawad, Vinita",Learning a new technology,Shadowing,17,01-Mar-24,ON,Senior Consultant,Lead,manager1@plato.com
+"Harinath, Naveenkumar",Internal Project/Assignment,Working on Mock Project 4,5,29-Feb-24,SK,Apprentice,Intern,manager2@plato.com
+"Modawel, Shweta",Taking up a certification,Shadowing,85,29-Feb-24,ATL,Consultant ,Intermediate,manager3@plato.com
+"Murphy, Arnold",Internal Project/Assignment,"Revamping skills in Cypress and is assigned to work on Internal mock project ""Orange HRM Internal Project""",382,29-Feb-24,ATL,Consultant ,Intermediate,manager4@plato.com
+"Singh, Rishabh",Learning a new technology,"Udemy courses analysis, PLATO CoE certificates",32,08-Mar-24,SK,Senior Consultant,Senior,manager5@plato.com
+"Weale, Paul",Internal Project/Assignment,Updating Course material for Foundation Training Program.,17,01-Mar-24,ON,Consultant,Intermediate,manager1@plato.com
+"Simon, Mark",Learning a new technology, 1. Working on reviewing and Updating Project - Payment Gateway Project,7,01-Mar-24,AB,Manager,Lead,manager2@plato.com
+"Syed, Amer Ali",Taking up a certification, 2. Creating a Topic on IT world for - writing Blog section,19,29-Feb-24,ON,Senior Consultant,Senior,manager3@plato.com
+"Balaraju, Vamana",Skill Enhancement, 3. Conducting interviews for consulting workshop with Afia,67,08-Mar-24,ON,Senior Consultant,Intermediate,manager4@plato.com
+"subashchandrabose, Suchitra",Taking up a course,,101,27-Feb-24,BC,Associate Consultant,Intermediate,manager5@plato.com
+"Chavan, Ashish",Learning a new technology,Working on internal project - Content Review where reviewing multiple articles,12,01-Mar-24,BC,Apprentice,Apprentice,manager1@plato.com
+"Kandibanda, Rakesh",Learning a new technology,,19,15-Mar-24,BC,Apprentice,Apprentice,manager2@plato.com
+"Lumberjack, Anna",Taking up a course,Attending and discussing plans in SAP LOB meetings,12,01-Mar-24,SK,Senior Consultant,Senior,manager3@plato.com
+"Midgley, Jordan",Internal Project/Assignment,Training Course of 'Generative AI for SAP',27,01-Mar-24,NO,Consultant,Intermediate,manager4@plato.com
+"Santhanam, Janani",Learning a new technology,Going through training - 'SAP PM Plant Maintenance' on Udemy,12,08-Mar-24,ON,Manager,Lead,manager5@plato.com
+"Taillefer, Monica",Internal Project/Assignment,To start work on OrangeHRM Application,162,29-Feb-24,ON,Senior Consultant,Senior,manager1@plato.com
+"Davis, Madison",Internal Project/Assignment,creating documentation for Internal non-billable project for Apprentices with Dani Gulliver,32,29-Feb-24,MB,Consultant ,Intermediate,manager2@plato.com
+"Shetty, Shruthi",Taking up a certification,PLATO Bench Activity: Selenium Web driver with PYTHON and Azure DevOps and  course from Udemy - on hold,12,08-Mar-24,BC,Senior Manager,Lead,manager3@plato.com
+"Kunwar, Mohini",Taking up a certification,"Deloitte Bench Activity Starts Sept 5th, 2023:",107,08-Mar-24,SK,Senior Consultant ,Senior,manager4@plato.com
+"Modi, Ravi",Taking up a certification,Grooming is in progress to start the project soon.,57,29-Feb-24,ON,Senior Consultant,Senior,manager5@plato.com
+"Bharadwaj, Sakshi",Taking up a certification,• Katalon application training is still continuing as per the guidelines of Deloitte.,12,08-Mar-24,ON,Senior Consultant,Senior,manager1@plato.com
+"Chidambaram, Meenakshi",Taking up a certification,• Executing assigned Test Cases on Oracle Cloud(HCM) application and also needs to automate by using katalon.,32,29-Feb-24,ON,Manager,Senior,manager2@plato.com
+"Morgan, Kevin",Helping PLATO management,• Working on End to End Test automated Scripts of Oracle FM -Payable,41,15-Mar-24,ON,Senior Business Analyst,Senior,manager3@plato.com
+"Pewtner, Natasha",Taking up a course,"              Manage customer address - add payment methods,add new account and add a suit - Inprogress",25,08-Mar-24,NO,Consultant,Intermediate,manager4@plato.com
+"Uddin, Nizam",Internal Project/Assignment,PLATO Bench Activity: Selenium Web driver with PYTHON and Azure DevOps and  course from Udemy - on hold,137,08-Mar-24,SK,Business Analyst,Intermediate,manager5@plato.com
+"Taypotat, Tristen",Internal Project/Assignment,"Deloitte Bench Activity Starts Sept 5th, 2023:",22,29-Mar-24,ATL,Associate Consultant,Junior,manager1@plato.com
+"Khan, Farhad",Taking up a certification,Grooming is in progress to start the project soon.,12,01-Mar-24,ON,Senior Consultant,Senior,manager2@plato.com
+"Komma, Pavithra",Taking up a certification,• Katalon application training is still continuing as per the guidelines of Deloitte.,41,27-Feb-24,ATL,Senior Consultant,Senior,manager3@plato.com
+"Adedosu, Ade",Taking up a certification,• Executing assigned Test Cases on Oracle Cloud(HCM) application and also needs to automate by using katalon.,162,08-Mar-24,NO,Apprentice,Intern,manager4@plato.com
+"Bolduc, Matthew",Taking up a certification,• Working on End to End Test automated Scripts of Oracle FM -Payable,139,01-Mar-24,BC,Apprentice,Apprentice,manager5@plato.com
+Himani,Internal Project/Assignment,"              Manage customer address - add payment methods,add new account and add a suit - Inprogress",10,01-Mar-24,ON,Apprentice,Intern,manager1@plato.com
+"Keenan, Sam",Internal Project/Assignment,Data Testing certification,317,07-Mar-24,ON,Apprentice,Intern,manager2@plato.com
+"Sedala Ramchander, Shravan",Internal Project/Assignment,[In Progress] SAP Testing Specialist Level 1- Training and Certification & Accessibility testing traning,12,01-Mar-24,ON,Apprentice,Intern,manager3@plato.com
+"Gaudet, Stephen",Internal Project/Assignment,[complete] 'Tricentis Tosca Deep Dive − Automating SAP test cases',97,04-Mar-24,ON,Consultant,Intermediate,manager4@plato.com
+"Agawa, Tasha",Internal Project/Assignment,[Completed] Tosca AS2 certification,22,01-Mar-24,NO,Apprentice,Intern,manager5@plato.com
+"Bellerose, Ray",Internal Project/Assignment,Learning SAP Colud ALM,12,08-Mar-24,NO,Apprentice,Intern,manager1@plato.com
+"Bishop, Nova ",Internal Project/Assignment,Working with the Resume Bulider team,117,23-Feb-24,NO,Apprentice,Intern,manager2@plato.com
+"Clarke, Clayton",Internal Project/Assignment,JavaScript refresher + Data Science + Machine Learning course (Scalar Academy),11,29-Feb-24,SK,Associate Consultant,Junior,manager3@plato.com
+"Compton, Koda",Internal Project/Assignment,Business First Initiative,32,08-Mar-24,NO,Apprentice,Intern,manager4@plato.com
+"Duguay, Jason",Internal Project/Assignment,Cypress automation training,247,08-Mar-24,NO,Apprentice,Intern,manager5@plato.com
+"Finlayson, Whit",Taking up a certification,5. Mock Project HRM - Start from 06-March to 29 March,17,06-Mar-24,BC,Apprentice,Apprentice,manager1@plato.com
+"Hetner, Amy",Internal Project/Assignment,2. SAP AI Session,159,01-Mar-24,ON,Consultant,Intermediate,manager2@plato.com
+"Kohoko, Kyrie",Internal Project/Assignment,3. Content Review,28,01-Mar-24,ATL,Apprentice,Apprentice,manager3@plato.com
+"Koppula, Gouthami",Taking up a certification,4. AI Courses Tools,74,28-Feb-24,ON,Senior Consultant,Senior,manager4@plato.com
+"Kyle, Mike",Internal Project/Assignment,[in progress] Shadowing PA Training class/curriculum; Website content review task,37,27-Feb-24,BC,Apprentice,Apprentice,manager5@plato.com
+"Mackenzie, Theo",Internal Project/Assignment,[Stalled] PLATO Data testing cert prep,41,01-Mar-24,NO,Apprentice,Intern,manager1@plato.com
+"MCGregor, Montana",Internal Project/Assignment,[Complete] - JIRA & Confluence certs; Recociliation training; New hire onboarding activities,57,01-Mar-24,ATL,Senior Consultant,Senior,manager2@plato.com
+"Morton, Kelly",Taking up a course,"Udemy courses analysis, PLATO CoE certificates",35,01-Mar-24,ON,Senior Manager,Lead,manager3@plato.com
+"Nicholson, Janet",Internal Project/Assignment,"Currently on vacation. Earlier worked on PLATO Internal Project - Toys R Us, Accessiblity Testing self-led PQA Training - In Progress, PLATO Security Clearance - Completed",37,29-Feb-24,ON,Manager,Lead,manager4@plato.com
+"Redbreast, Paige",Internal Project/Assignment,"Accessibility Testing Training, SQL Fundamentals",32,01-Mar-24,AB,Manager,Lead,manager5@plato.com
