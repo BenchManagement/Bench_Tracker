@@ -15,4 +15,4 @@ st.markdown(
 """
 )
 st.write("Still have questions? Feel free to send your queries to bench.management@platotech.com")
-st.write("Check out this [GitHub Repository](https://github.com/ravitejaruthala/PLATO_BenchReport) for the code source.")
+st.write("Check out this [GitHub Repository](https://github.com/BenchManagement/Bench_Tracker) for the code source.")
