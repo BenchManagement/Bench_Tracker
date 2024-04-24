@@ -1,4 +1,4 @@
-Pandas     2
+Pandas     2.2
 Plotly     5.17.0
 Python     3.11.8
 Streamlit     1.33.0
