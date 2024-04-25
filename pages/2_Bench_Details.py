@@ -59,12 +59,12 @@ if(benchData):
         else:
             conValidationRemovalDate.write("Bench Removal dates are up to date. No action is required.")     
     conCategory = st.container(border=True)
-    selectedCat = conCategory.selectbox('**Activity Category Lookup:**', activityCategories, index=None, placeholder='Choose an option...', help="Select an activity to know the list of associates working in the particular area.")
+    selectedCat = conCategory.selectbox('**Activity Category Lookup:**', activityCategories, index=None, placeholder='Choose an activity category...', help="Select an activity to know the list of associates working in the particular area.")
     if(selectedCat):
         conCategory.write('Below employees are working on '+selectedCat)
         conCategory.table(rawData.query('activityCategory == @selectedCat')[['employeeName', 'activityDetails']])     
     conEmployee = st.container(border=True)
-    selectedEmp = conEmployee.selectbox('**Associate Task Overview:**',empNames, index=None, placeholder='Choose an employee...', help="This section provides details about the work and activities of a selected associate.")
+    selectedEmp = conEmployee.selectbox('**Associate Task Overview:**',empNames, index=None, placeholder='Choose an associate...', help="This section provides details about the work and activities of a selected associate.")
     if(selectedEmp):
         selectedRow = rawData.query('employeeName == @selectedEmp')
         conEmployee.write(selectedRow['activityCategory'])
