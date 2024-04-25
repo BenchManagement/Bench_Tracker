@@ -21,7 +21,8 @@ if(benchData):
     empNames = rawData['employeeName']
     activityCategories = rawData['activityCategory'].unique()
     conValidationDate = st.container(border=True)
-    validationDate = conValidationDate.date_input("**Associate's activity End date Status Check:**", value=None, help="This section will pull out the list of associates (along with Manager Email IDs) with 'Activity End Date' as past date from the bench report on the basis of the date entered below.")
+    conValidationDate.write("**Associate's activity End date Status Check:**")
+    validationDate = conValidationDate.date_input("This section will pull out the list of associates (along with Manager Email IDs) with 'Activity End Date' as past date from the bench report on the basis of the date entered below.", value=None)
     if(validationDate):
         for dateValue in rawData['endDate']:
             count=count+1
