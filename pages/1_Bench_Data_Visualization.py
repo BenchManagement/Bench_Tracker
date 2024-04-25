@@ -48,19 +48,19 @@ if(benchData):
         regionBench.append(list(rawData['region']).count(r))
     for i in range(len(regionBench)):
         regionRate.append(round((regionBench[i]*100)/regionTotal[i],2))
-    regionPie = px.pie(rawData['region'], values=regionBench, names=regions, title='Bench Report Summary based on Region - PLATO Level')
+    regionPie = px.pie(rawData['region'], values=regionBench, names=regions, title='Regional Bench Distribution: PLATO-Wide Percentage.')
     st.plotly_chart(regionPie)
     regionBar = go.Figure(
         data=[go.Bar(x=regions, y=regionTotal, name="Total region count", text=regionTotal),
             go.Bar(x=regions, y=regionBench, name="Bench count per region", text=regionBench),
             go.Bar(x=regions, y=regionRate, name="Employee % on Bench", text=regionRate)])
-    regionBar.update_layout(title_text="Region-wise Bench summary - Region Level", bargap=0.2, bargroupgap=0)
+    regionBar.update_layout(title_text="Regional Bench Distribution: Region-Wide Percentage.", bargap=0.2, bargroupgap=0)
     st.plotly_chart(regionBar)
-    designationPie = px.histogram(dDesgination, x = "designation", title='Bench Report Summary based on Designation', text_auto=True).update_xaxes(categoryorder='total descending')
+    designationPie = px.histogram(dDesgination, x = "designation", title='Bench Count based on Designations.', text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(designationPie)
-    levelPie = px.histogram(dLevel, x = "level", title='Bench Report Summary based on experience level', text_auto=True).update_xaxes(categoryorder='total descending')
+    levelPie = px.histogram(dLevel, x = "level", title='Bench Count based on Experience Level.', text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(levelPie)
-    categoryBar = px.histogram(dCategory, x = "activityCategory", title='Bench Report Summary based on Activity Category', text_auto=True).update_xaxes(categoryorder='total descending')
+    categoryBar = px.histogram(dCategory, x = "activityCategory", title='Bench Productivity Chart: Activity-Based Distribution.', text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(categoryBar)
     for n in list(rawData['benchTime']):
         timeCount=timeCount+1
@@ -77,5 +77,5 @@ if(benchData):
         data=[go.Bar(x=benchEmployeeRed, y=benchTimeRed, name="Tenure more than 90 days", text=benchTimeRed, marker_color='FireBrick'),
             go.Bar(x=benchEmployeeAmber, y=benchTimeAmber, name="Tenure between 45 to 90 days", text=benchTimeAmber, marker_color='DarkOrange'),
             go.Bar(x=benchEmployeeBlue, y=benchTimeBlue, name="Tenure less than 45 days", text=benchTimeBlue, marker_color='Blue')])
-    benchTimeBar.update_layout(title_text="Bench Tenure Summary", bargap=0.2, bargroupgap=0)
+    benchTimeBar.update_layout(title_text="Bench Tenure Summary.", bargap=0.2, bargroupgap=0)
     st.plotly_chart(benchTimeBar)

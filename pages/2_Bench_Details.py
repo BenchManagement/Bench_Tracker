@@ -21,7 +21,7 @@ if(benchData):
     empNames = rawData['employeeName']
     activityCategories = rawData['activityCategory'].unique()
     conValidationDate = st.container(border=True)
-    validationDate = conValidationDate.date_input("**Activity End Date - Enter the validation date:**", value=None, help="This feature helps to validate the Bench Report's End Date values. To set a reference date please input this field.")
+    validationDate = conValidationDate.date_input("**Associate's activity End date Status Check:**", value=None, help="This section will pull out the list of associates (along with Manager Email IDs) with 'Activity End Date' as past date from the bench report on the basis of the date entered below.")
     if(validationDate):
         for dateValue in rawData['endDate']:
             count=count+1
@@ -42,7 +42,7 @@ if(benchData):
         else:
             conValidationDate.write("Bench Report is updated. No action is required.")
     conValidationRemovalDate = st.container(border=True)
-    validationRemovalDate = conValidationRemovalDate.date_input("**Bench Removal - Enter the validation date:**", value=None, help="This feature helps to validate the Bench Removal Date values. To set a reference date please input this field.")
+    validationRemovalDate = conValidationRemovalDate.date_input("**Associate's Bench Removal date Status Check:**", value=None, help="This section provides list of employees with 'Bench Removal Date' as past date on the basis of reference date entered.")
     if(validationRemovalDate):
         for dateValue in rawData['benchRemovalDate']:
             removalDateCount=removalDateCount+1
@@ -58,12 +58,12 @@ if(benchData):
         else:
             conValidationRemovalDate.write("Bench Removal dates are up to date. No action is required.")     
     conCategory = st.container(border=True)
-    selectedCat = conCategory.selectbox('**Select an activity.**', activityCategories, index=None, placeholder='Choose an option...', help="Provides a list of employees who are performing similar activity.")
+    selectedCat = conCategory.selectbox('**Activity Category Lookup:**', activityCategories, index=None, placeholder='Choose an option...', help="Select an activity to know the list of associates working in the particular area.")
     if(selectedCat):
         conCategory.write('Below employees are working on '+selectedCat)
         conCategory.table(rawData.query('activityCategory == @selectedCat')[['employeeName', 'activityDetails']])     
     conEmployee = st.container(border=True)
-    selectedEmp = conEmployee.selectbox('**Select an employee.**',empNames, index=None, placeholder='Choose an employee...', help="Provides the details of an employee that is available on the Bench Report.")
+    selectedEmp = conEmployee.selectbox('**Associate Task Overview:**',empNames, index=None, placeholder='Choose an employee...', help="This section provides details about the work and activities of a selected associate.")
     if(selectedEmp):
         selectedRow = rawData.query('employeeName == @selectedEmp')
         conEmployee.write(selectedRow['activityCategory'])
