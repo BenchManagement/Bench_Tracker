@@ -9,7 +9,7 @@ st.markdown(
    data from the bench report Excel file. Through simplified and graphical representations, the tool
    offers a clear and insightful overview of bench utilization and activity distribution within PLATO.
     ### Instructions.
-        1. Bench Data Visualization - Please select the ‘Bench data Visualization’
+            1. Bench Data Visualization - Please select the ‘Bench data Visualization’
         tab from left panel. Import the bench report file, and the data should flow 
         automatically. This section focuses mainly on bench count.
         2. Bench Details – Please select ‘Bench Details’ tab from left panel. This
