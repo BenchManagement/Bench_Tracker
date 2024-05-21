@@ -12,13 +12,11 @@ st.subheader("Instructions.")
 st.write('''
     * Bench Data Visualization - Please select the ‘Bench data Visualization’
     tab from left panel. Import the bench report file, and the data should flow 
-    automatically. This section focuses mainly on bench count.''')
-st.write('''
+    automatically. This section focuses mainly on bench count.
     * Bench Details – Please select ‘Bench Details’ tab from left panel. This
     section provides more granular details on bench activity assignment and Bench
     removal plans.
-         ''')
-st.write('''* With the Email Trigger option, automatic emails can be send in below cases-
+    * With the Email Trigger option, automatic emails can be send in below cases-
                     * Activity End date is past due date.
                     * Bench Removal date is a past date.''') 
 st.subheader("More Information:")
