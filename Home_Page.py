@@ -7,17 +7,20 @@ st.write(
     """
    The bench activity tracker is a powerful tool designed to streamline and visualize essential
    data from the bench report Excel file. Through simplified and graphical representations, the tool
-   offers a clear and insightful overview of bench utilization and activity distribution within PLATO.
-    ### Instructions.
-            1. Bench Data Visualization - Please select the ‘Bench data Visualization’
-        tab from left panel. Import the bench report file, and the data should flow 
-        automatically. This section focuses mainly on bench count.
-        2. Bench Details – Please select ‘Bench Details’ tab from left panel. This
-        section provides more granular details on bench activity assignment and Bench
-        removal plans.
-        3. With the Email Trigger option, automatic emails can be send in below cases-
-                a. Activity End date is past due date.
-                b. Bench Removal date is a past date.
+   offers a clear and insightful overview of bench utilization and activity distribution within PLATO.""")
+st.subheader("Instructions.")
+st.write('''
+    1. Bench Data Visualization - Please select the ‘Bench data Visualization’
+    tab from left panel. Import the bench report file, and the data should flow 
+    automatically. This section focuses mainly on bench count.
+    2. Bench Details – Please select ‘Bench Details’ tab from left panel. This
+    section provides more granular details on bench activity assignment and Bench
+    removal plans.
+    3. With the Email Trigger option, automatic emails can be send in below cases-
+            a. Activity End date is past due date.
+            b. Bench Removal date is a past date.
+         ''')
+        
     ### More Info
 """
 )
