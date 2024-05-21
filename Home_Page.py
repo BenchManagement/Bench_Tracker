@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Bench Tracker", page_icon="📒")
 st.sidebar.header("Bench Tracker - Home Page")
 st.markdown("# PLATO - Bench Activities Tracker")
-st.markdown(
+st.write(
     """
    The bench activity tracker is a powerful tool designed to streamline and visualize essential
    data from the bench report Excel file. Through simplified and graphical representations, the tool
