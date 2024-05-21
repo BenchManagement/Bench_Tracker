@@ -18,9 +18,9 @@ st.write('''
     section provides more granular details on bench activity assignment and Bench
     removal plans.
          ''')
-st.write('''3. With the Email Trigger option, automatic emails can be send in below cases-
-                a. Activity End date is past due date.
-                b. Bench Removal date is a past date.''') 
+st.write('''3. With the Email Trigger option, automatic emails can be send in below cases-''')
+st.write('''        a. Activity End date is past due date.''')
+st.write('''        b. Bench Removal date is a past date.''') 
 st.subheader("More Information:")
 st.write("Still have questions? Feel free to send your queries to bench.management@platotech.com")
 st.write("Check out this [GitHub Repository](https://github.com/BenchManagement/Bench_Tracker) for the code source.")
