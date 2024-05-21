@@ -8,8 +8,6 @@ employeeRemovalDateList=[]
 regionBench = []
 regionRate = []
 removalDate = ""
-expected = 'TBD'
-altExpected = 'TDB'
 benchTimeRed=[]
 benchEmployeeRed=[]
 benchTimeAmber=[]
@@ -39,11 +37,6 @@ if(benchData):
     conSummary.write('**Total number of employees with Bench Removal Date** - '+str((empNames.index.size)-removalDate.count('tentative')-removalDate.count(expected)-removalDate.count(altExpected)))
     conSummary.write('**Total number of employees with Tentative Bench Removal Date** - '+ str(removalDate.count('tentative')))
     conSummary.write('**Total number of employees who needs a Bench Removal Date (TBD)** - '+ str(removalDate.count(expected)+ removalDate.count(altExpected)))
-    with st.popover("**Associates with no Bench Removal Date assigned.**"):
-        for name in list(rawData.query('benchRemovalDate == @expected')['employeeName']):
-            st.write(name)
-        for name in list(rawData.query('benchRemovalDate == @altExpected')['employeeName']):
-            st.write(name)
     for r in regions:
         regionBench.append(list(rawData['region']).count(r))
     for i in range(len(regionBench)):

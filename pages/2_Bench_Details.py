@@ -10,6 +10,8 @@ removalDateCount=-1
 email=""
 employee=""
 employeeRemovalDate=""
+expected = 'TBD'
+altExpected = 'TDB'
 
 st.set_page_config(page_title="Bench Details", page_icon="📖")
 st.markdown("# Bench Details")
