@@ -39,7 +39,7 @@ if(benchData):
     conSummary.write('**Total number of employees with Bench Removal Date** - '+str((empNames.index.size)-removalDate.count('tentative')-removalDate.count(expected)-removalDate.count(altExpected)))
     conSummary.write('**Total number of employees with Tentative Bench Removal Date** - '+ str(removalDate.count('tentative')))
     conSummary.write('**Total number of employees who needs a Bench Removal Date (TBD)** - '+ str(removalDate.count(expected)+ removalDate.count(altExpected)))
-    with st.popover("**Employees who need a Bench Removal Date**"):
+    with st.popover("**Associates with no Bench Removal Date assigned.**"):
         for name in list(rawData.query('benchRemovalDate == @expected')['employeeName']):
             st.write(name)
         for name in list(rawData.query('benchRemovalDate == @altExpected')['employeeName']):

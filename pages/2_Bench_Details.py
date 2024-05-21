@@ -20,6 +20,11 @@ if(benchData):
     rawData = pd.read_excel(benchData, sheet_name="Bench_Activities")
     empNames = rawData['employeeName']
     activityCategories = rawData['activityCategory'].unique()
+    with st.popover("**Associates with no Bench Removal Date assigned.**"):
+        for name in list(rawData.query('benchRemovalDate == @expected')['employeeName']):
+            st.write(name)
+        for name in list(rawData.query('benchRemovalDate == @altExpected')['employeeName']):
+            st.write(name)
     conValidationDate = st.container(border=True)
     conValidationDate.write("**Associate's activity End date Status Check:**")
     validationDate = conValidationDate.date_input("This section will pull out the list of associates (along with Manager Email IDs) with 'Activity End Date' as past date from the bench report on the basis of the date entered below.", value=None)
