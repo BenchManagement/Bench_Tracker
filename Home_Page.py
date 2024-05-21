@@ -8,7 +8,7 @@ st.write(
    The bench activity tracker is a powerful tool designed to streamline and visualize essential
    data from the bench report Excel file. Through simplified and graphical representations, the tool
    offers a clear and insightful overview of bench utilization and activity distribution within PLATO.""")
-st.subheader("Instructions.")
+st.subheader("Instructions:")
 st.write('''
     * Bench Data Visualization - Please select the ‘Bench data Visualization’
     tab from left panel. Import the bench report file, and the data should flow 
