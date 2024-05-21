@@ -18,7 +18,7 @@ st.write('''
     section provides more granular details on bench activity assignment and Bench
     removal plans.
          ''')
-st.markdown('''3. With the Email Trigger option, automatic emails can be send in below cases-
+st.write('''3. With the Email Trigger option, automatic emails can be send in below cases-
                 a. Activity End date is past due date.
                 b. Bench Removal date is a past date.''') 
 st.subheader("More Information:")
