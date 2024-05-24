@@ -19,25 +19,26 @@ st.sidebar.header("Bench Details")
 
 benchData = st.file_uploader("Choose the data file")
 if(benchData):
-    rawData = pd.read_excel(benchData, sheet_name="Bench_Activities")
-    empNames = rawData['employeeName']
-    activityCategories = rawData['activityCategory'].unique()
+    rawData = pd.read_excel(benchData, sheet_name="Bench")
+    empNames = rawData['Employee_LName_FName']
+    activityCategories = rawData['Activity_Category'].unique()
     with st.popover("**Associates with no Bench Removal Date assigned.**"):
-        for name in list(rawData.query('benchRemovalDate == @expected')['employeeName']):
+        for name in list(rawData.query('Bench_Removal_Start_Date == @expected')['Employee_LName_FName']):
             st.write(name)
-        for name in list(rawData.query('benchRemovalDate == @altExpected')['employeeName']):
+        for name in list(rawData.query('Bench_Removal_Start_Date == @altExpected')['Employee_LName_FName']):
             st.write(name)
     conValidationDate = st.container(border=True)
     conValidationDate.write("**Associate's activity End date Status Check:**")
     validationDate = conValidationDate.date_input("This section will pull out the list of associates (along with Manager Email IDs) with 'Activity End Date' as past date from the bench report on the basis of the date entered below.", value=None)
     if(validationDate):
-        for dateValue in rawData['endDate']:
+        for dateValue in rawData['Activity_End']:
             count=count+1
-            if(dateValue.date() > validationDate):
-                pass
-            else:
-                managerList.append(rawData["managerID"][count])  
-                employeeList.append(rawData['employeeName'][count])
+            if isinstance(dateValue, datetime):
+                if(dateValue.date() > validationDate):
+                    pass
+                else:
+                    managerList.append(rawData["Manager_ Email_Id"][count])  
+                    employeeList.append(rawData['Employee_LName_FName'][count])
         for id in list(set(managerList)):
             email= email+str(id)+";"+" "
         for name in list(set(employeeList)):
@@ -52,13 +53,13 @@ if(benchData):
     conValidationRemovalDate = st.container(border=True)
     validationRemovalDate = conValidationRemovalDate.date_input("**Associate's Bench Removal date Status Check:**", value=None, help="This section provides list of employees with 'Bench Removal Date' as past date on the basis of reference date entered.")
     if(validationRemovalDate):
-        for dateValue in rawData['benchRemovalDate']:
+        for dateValue in rawData['Bench_Removal_Start_Date']:
             removalDateCount=removalDateCount+1
             if isinstance(dateValue, datetime):
                 if(dateValue.date() > validationRemovalDate):
                     pass
                 else: 
-                    employeeRemovalDateList.append(rawData['employeeName'][removalDateCount])
+                    employeeRemovalDateList.append(rawData['Employee_LName_FName'][removalDateCount])
         for name in employeeRemovalDateList:
             employeeRemovalDate= employeeRemovalDate+str(name)+"\n"
         if(len(employeeRemovalDateList)>0):
@@ -69,12 +70,12 @@ if(benchData):
     selectedCat = conCategory.selectbox('**Activity Category Lookup:**', activityCategories, index=None, placeholder='Choose an activity category...', help="Select an activity to know the list of associates working in the particular area.")
     if(selectedCat):
         conCategory.write('Below employees are working on '+selectedCat)
-        conCategory.table(rawData.query('activityCategory == @selectedCat')[['employeeName', 'activityDetails']])     
+        conCategory.table(rawData.query('Activity_Category == @selectedCat')[['Employee_LName_FName', 'Activity_Details']])     
     conEmployee = st.container(border=True)
     selectedEmp = conEmployee.selectbox('**Associate Task Overview:**',empNames, index=None, placeholder='Choose an associate...', help="This section provides details about the work and activities of a selected associate.")
     if(selectedEmp):
-        selectedRow = rawData.query('employeeName == @selectedEmp')
-        conEmployee.write(selectedRow['activityCategory'])
-        conEmployee.write(selectedRow['activityDetails'])
-        conEmployee.write(selectedRow['benchRemovalPlan'])
-        conEmployee.write(selectedRow['benchRemovalDate'])
+        selectedRow = rawData.query("Employee_LName_FName == @selectedEmp")
+        conEmployee.write(selectedRow['Activity_Category'])
+        conEmployee.write(selectedRow['Activity_Details'])
+        conEmployee.write(selectedRow['Bench_Removal_Planned_Project'])
+        conEmployee.write(selectedRow['Bench_Removal_Start_Date'])
