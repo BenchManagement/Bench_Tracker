@@ -18,7 +18,6 @@ benchTimeAmber=[]
 benchEmployeeAmber=[]
 benchTimeBlue=[]
 benchEmployeeBlue=[]
-trimmed_designation=[]
 
 st.set_page_config(page_title="Bench Data Visualization", page_icon="📈")
 st.markdown("# Bench Data Visualization")
@@ -50,18 +49,18 @@ if(benchData):
         regionRate.append(round((regionBench[i]*100)/regionTotal[i],2))
     regionPie = px.pie(rawData['Region'], values=regionBench, names=regions, title='Regional Bench Distribution: PLATO-Wide Percentage.')
     st.plotly_chart(regionPie)
-    regionBar = go.Figure(
+    region_plot = go.Figure(
         data=[go.Bar(x=regions, y=regionTotal, name="Total region count", text=regionTotal),
             go.Bar(x=regions, y=regionBench, name="Bench count per region", text=regionBench),
             go.Bar(x=regions, y=regionRate, name="Employee % on Bench", text=regionRate)])
-    regionBar.update_layout(title_text="Regional Bench Distribution: Region-Wide Percentage.", bargap=0.2, bargroupgap=0)
-    st.plotly_chart(regionBar)
-    designationPie = px.histogram(dDesignation.str.strip(), x="Job_Title", title='Bench Count based on Designations.', text_auto=True).update_xaxes(categoryorder='total descending')
-    st.plotly_chart(designationPie)
-    levelPie = px.histogram(dLevel.str.strip(), x = "Level", title='Bench Count based on Experience Level.', text_auto=True).update_xaxes(categoryorder='total descending')
-    st.plotly_chart(levelPie)
-    categoryBar = px.histogram(dCategory.str.strip(), x = "Activity_Category", title='Bench Productivity Chart: Activity-Based Distribution.', text_auto=True).update_xaxes(categoryorder='total descending')
-    st.plotly_chart(categoryBar)
+    region_plot.update_layout(title_text="Regional Bench Distribution: Region-Wide Percentage.", bargap=0.2, bargroupgap=0)
+    st.plotly_chart(region_plot)
+    designation_plot = px.histogram(dDesignation.str.strip(), x="Job_Title", title='Bench Count based on Designations.', text_auto=True).update_xaxes(categoryorder='total descending')
+    st.plotly_chart(designation_plot)
+    level_plot = px.histogram(dLevel.str.strip(), x = "Level", title='Bench Count based on Experience Level.', text_auto=True).update_xaxes(categoryorder='total descending')
+    st.plotly_chart(level_plot)
+    category_plot = px.histogram(dCategory.str.strip(), x = "Activity_Category", title='Bench Productivity Chart: Activity-Based Distribution.', text_auto=True).update_xaxes(categoryorder='total descending')
+    st.plotly_chart(category_plot)
     for n in list(rawData['Time_On_Bench']):
         timeCount=timeCount+1
         if (n < 45):
