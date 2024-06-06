@@ -20,6 +20,7 @@ benchTimeBlue=[]
 benchEmployeeBlue=[]
 
 st.set_page_config(page_title="Bench Data Visualization", page_icon="📈")
+st.markdown(streamlit_style, unsafe_allow_html=True)
 st.markdown("# Bench Data Visualization")
 st.sidebar.header("Bench Data Visualization")
 
