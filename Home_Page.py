@@ -1,11 +1,18 @@
 import streamlit as st
 
+streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+""" 
 st.set_page_config(page_title="Bench Tracker", page_icon="📒")
+st.markdown(streamlit_style, unsafe_allow_html=True)
 st.sidebar.header("Bench Tracker - Home Page")
 st.markdown("# PLATO - Bench Activities Tracker")
 st.write(
-    """
-   The bench activity tracker is a powerful tool designed to streamline and visualize essential
+    """The bench activity tracker is a powerful tool designed to streamline and visualize essential
    data from the bench report Excel file. Through simplified and graphical representations, the tool
    offers a clear and insightful overview of bench utilization and activity distribution within PLATO.""")
 st.subheader("Instructions:")
