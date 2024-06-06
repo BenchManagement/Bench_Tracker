@@ -14,6 +14,7 @@ expected = 'TBD'
 altExpected = 'TDB'
 
 st.set_page_config(page_title="Bench Details", page_icon="📖")
+st.markdown(streamlit_style, unsafe_allow_html=True)
 st.markdown("# Bench Details")
 st.sidebar.header("Bench Details")
 
