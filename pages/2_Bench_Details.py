@@ -39,7 +39,7 @@ if bench_data:
                                                   value=None,
                                                   help="This section will pull out the list of associates (along with "
                                                        "Manager Email IDs) with 'Activity End Date' as"
-                                                       "past date from the bench report on the basis of the date "
+                                                       " past date from the bench report on the basis of the date "
                                                        "entered below.")
     if validationDate:
         for dateValue in rawData['Activity_End']:
