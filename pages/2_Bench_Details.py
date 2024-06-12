@@ -35,11 +35,12 @@ if bench_data:
         for name in list(rawData.query('Bench_Removal_Start_Date == @altExpected')['Employee_LName_FName']):
             st.write(name)
     conValidationDate = st.container(border=True)
-    conValidationDate.write("**Associate's activity End date Status Check:**")
-    validationDate = conValidationDate.date_input(
-        "This section will pull out the list of associates (along with Manager Email IDs) with 'Activity End Date' as "
-        "past date from the bench report on the basis of the date entered below.",
-        value=None)
+    validationDate = conValidationDate.date_input("**Associate's activity End date Status Check:**",
+                                                  value=None,
+                                                  help="This section will pull out the list of associates (along with "
+                                                       "Manager Email IDs) with 'Activity End Date' as"
+                                                       "past date from the bench report on the basis of the date "
+                                                       "entered below.")
     if validationDate:
         for dateValue in rawData['Activity_End']:
             count = count + 1
