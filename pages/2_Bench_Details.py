@@ -109,5 +109,5 @@ if bench_data:
         selectedRow = rawData.query("Employee_LName_FName == @selectedEmp")
         conEmployee.write(selectedRow['Activity_Category'])
         conEmployee.write(selectedRow['Activity_Details'])
-        conEmployee.write(selectedRow['Bench_Removal_Planned_Project'])
+        conEmployee.write(selectedRow['Planned_Opportunities'])
         conEmployee.write(selectedRow['Bench_Removal_Start_Date'])
