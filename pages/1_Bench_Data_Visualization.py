@@ -38,6 +38,7 @@ if bench_data:
     dCategory = rawData['Activity_Category']
     dLevel = rawData['Level']
     dDesignation = rawData['Job_Title']
+    pool_data = rawData['Pool']
     regions = fixedData['Region']
     regionTotal = list(fixedData['Region_Total'])
     conSummary = st.container(border=True)
@@ -56,9 +57,9 @@ if bench_data:
         regionBench.append(list(rawData['Region']).count(r))
     for i in range(len(regionBench)):
         regionRate.append(round((regionBench[i] * 100) / regionTotal[i], 2))
-    regionPie = px.pie(rawData['Region'], values=regionBench, names=regions, title='Regional Bench Distribution: '
-                                                                                   'PLATO-Wide Percentage.')
+    regionPie = px.pie(rawData['Region'], values=regionBench, names=regions, title='Regional Bench Distribution: PLATO-Wide Percentage.')
     st.plotly_chart(regionPie)
+    st.divider()
     region_plot = go.Figure(
         data=[go.Bar(x=regions, y=regionTotal, name="Total region count", text=regionTotal),
               go.Bar(x=regions, y=regionBench, name="Bench count per region", text=regionBench),
@@ -66,18 +67,34 @@ if bench_data:
     region_plot.update_layout(title_text="Regional Bench Distribution: Region-Wide Percentage.", bargap=0.2,
                               bargroupgap=0)
     st.plotly_chart(region_plot)
+    st.divider()
     designation_plot = px.histogram(dDesignation.str.strip(), x="Job_Title", title='Bench Count based on Designations.',
                                     text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(designation_plot)
+    st.divider()
+    pool_plot = px.histogram(pool_data.str.strip(), x="Pool", title='Bench Count based on Pool.',
+                                    text_auto=True).update_xaxes(categoryorder='total descending')
+    st.plotly_chart(pool_plot)
+    st.divider()
     level_plot = px.histogram(dLevel.str.strip(), x="Level", title='Bench Count based on Experience Level.',
                               text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(level_plot)
+    st.divider()
     category_plot = px.histogram(dCategory.str.strip(), x="Activity_Category", title='Bench Productivity Chart: '
                                                                                      'Activity-Based '
                                                                                      'Distribution.',
                                  text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(category_plot)
-    for n in list(rawData['Time_On_Bench']):
+    st.divider()
+    tenure_options = ['All']
+    for pool in pool_data.dropna().unique():
+        tenure_options.append(pool)
+    tenure_selection = st.selectbox("**Enter your selection for Bench Tenure visualization.**", options=tenure_options, placeholder="Select your choice for Bench Tenure")
+    if tenure_selection is 'All':
+        graph_data = list(rawData['Time_On_Bench'])
+    else:
+        graph_data = list(rawData.query('Pool == @tenure_selection')['Time_On_Bench'])
+    for n in graph_data:
         timeCount = timeCount + 1
         if n < 45:
             benchEmployeeBlue.append(rawData['Employee_LName_FName'][timeCount])
@@ -95,5 +112,5 @@ if bench_data:
                      marker_color='DarkOrange'),
               go.Bar(x=benchEmployeeBlue, y=benchTimeBlue, name="Tenure less than 45 days", text=benchTimeBlue,
                      marker_color='Blue')])
-    benchTimeBar.update_layout(title_text="Bench Tenure Summary.", bargap=0.2, bargroupgap=0)
+    benchTimeBar.update_layout(title_text="Bench Tenure Summary - "+tenure_selection, bargap=0.2, bargroupgap=0)
     st.plotly_chart(benchTimeBar)
