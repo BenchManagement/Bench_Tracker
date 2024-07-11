@@ -18,6 +18,7 @@ benchTimeAmber = []
 benchEmployeeAmber = []
 benchTimeBlue = []
 benchEmployeeBlue = []
+tenure_options = ['All']
 
 st.set_page_config(page_title="Bench Data Visualization", page_icon="📈")
 st.markdown("""
@@ -86,25 +87,27 @@ if bench_data:
                                  text_auto=True).update_xaxes(categoryorder='total descending')
     st.plotly_chart(category_plot)
     st.divider()
-    tenure_options = ['All']
     for pool in pool_data.dropna().unique():
         tenure_options.append(pool)
-    tenure_selection = st.selectbox("**Enter your selection for Bench Tenure visualization.**", options=tenure_options, placeholder="Select your choice for Bench Tenure")
+    tenure_selection = st.selectbox("**Enter your selection for Bench Tenure visualization.**", options=tenure_options)
     if tenure_selection is 'All':
-        graph_data = list(rawData['Time_On_Bench'])
+        pool_employee = list(rawData['Employee_LName_FName'])
+        pool_tenure = list(rawData['Time_On_Bench'])
     else:
-        graph_data = list(rawData.query('Pool == @tenure_selection')['Time_On_Bench'])
-    for n in graph_data:
+        graph_data = rawData.query('Pool == @tenure_selection')
+        pool_employee = list(graph_data['Employee_LName_FName'])
+        pool_tenure = list(graph_data['Time_On_Bench'])
+    for n in pool_tenure:
         timeCount = timeCount + 1
         if n < 45:
-            benchEmployeeBlue.append(rawData['Employee_LName_FName'][timeCount])
+            benchEmployeeBlue.append(pool_employee[timeCount])
             benchTimeBlue.append(n)
         elif 45 <= n <= 90:
-            benchEmployeeAmber.append(rawData['Employee_LName_FName'][timeCount])
+            benchEmployeeAmber.append(pool_employee[timeCount])
             benchTimeAmber.append(n)
         elif n > 90:
-            benchEmployeeRed.append(rawData['Employee_LName_FName'][timeCount])
-            benchTimeRed.append(n)
+            benchEmployeeRed.append(pool_employee[timeCount])
+            benchTimeRed.append(n)  
     benchTimeBar = go.Figure(
         data=[go.Bar(x=benchEmployeeRed, y=benchTimeRed, name="Tenure more than 90 days", text=benchTimeRed,
                      marker_color='FireBrick'),
