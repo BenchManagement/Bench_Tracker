@@ -29,7 +29,9 @@ if bench_data:
     rawData = pd.read_excel(bench_data, sheet_name="Bench")
     empNames = rawData['Employee_LName_FName']
     activityCategories = rawData['Activity_Category'].unique()
-    with st.popover("**Associates with no Bench Removal Date assigned.**"):
+    with st.popover("**Entire list of Associates on Bench.**", use_container_width=True):
+        st.dataframe(rawData[["Employee_LName_FName", "Manager"]], hide_index=True, column_config={"Employee_LName_FName":"Associate Name","Manager":"Associate's Manager"}, use_container_width=True)
+    with st.popover("**Associates with no Bench Removal Date assigned.**", use_container_width=True):
         for name in list(rawData.query('Bench_Removal_Start_Date == @expected')['Employee_LName_FName']):
             st.write(name)
         for name in list(rawData.query('Bench_Removal_Start_Date == @altExpected')['Employee_LName_FName']):
