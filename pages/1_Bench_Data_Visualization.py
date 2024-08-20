@@ -115,5 +115,5 @@ if bench_data:
                      marker_color='DarkOrange'),
               go.Bar(x=benchEmployeeBlue, y=benchTimeBlue, name="Tenure less than 45 days", text=benchTimeBlue,
                      marker_color='Blue')])
-    benchTimeBar.update_layout(title_text="Bench Tenure Summary - "+tenure_selection, bargap=0.2, bargroupgap=0)
+    benchTimeBar.update_layout(title_text="Bench Tenure Summary - "+tenure_selection, bargap=0.2, bargroupgap=0, xaxis={'categoryorder':'total descending'})
     st.plotly_chart(benchTimeBar)

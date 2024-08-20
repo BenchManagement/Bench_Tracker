@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+import numpy as np
 
 managerList = []
 employeeList = []
+manager_name_list = []
+dateList = []
 employeeRemovalDateList = []
 count = -1
 removalDateCount = -1
@@ -52,6 +55,8 @@ if bench_data:
                 else:
                     managerList.append(rawData["Manager_ Email_Id"][count])
                     employeeList.append(rawData['Employee_LName_FName'][count])
+                    dateList.append(dateValue.date())
+                    manager_name_list.append(rawData["Manager"][count])
         for manager_name in list(set(managerList)):
             email = email + str(manager_name) + ";" + " "
         for name in list(set(employeeList)):
@@ -67,6 +72,9 @@ if bench_data:
                                               file_name='Bench Report Update Required - Employees.txt',
                                               help="Provides a text file that contains the list of employees whose "
                                                    "End Date needs an update.")
+            with st.popover("**List of Associates with past Bench Activity date.**", use_container_width=True):
+                Past_Date_Data_Array = np.array([employeeList, manager_name_list, managerList, dateList]).T
+                st.dataframe(list(Past_Date_Data_Array), hide_index=True, column_config={1:"Associate Name", 2:"Associate's Manager", 3:"Manager's Email ID", 4:"Activity End Date"}, use_container_width=True)
         else:
             conValidationDate.write("Bench Report is updated. No action is required.")
     conValidationRemovalDate = st.container(border=True)
