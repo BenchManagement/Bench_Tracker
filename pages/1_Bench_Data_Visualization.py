@@ -90,7 +90,7 @@ if bench_data:
     for pool in pool_data.dropna().unique():
         tenure_options.append(pool)
     tenure_selection = st.selectbox("**Enter your selection for Bench Tenure visualization.**", options=tenure_options)
-    if tenure_selection is 'All':
+    if tenure_selection == 'All':
         pool_employee = list(rawData['Employee_LName_FName'])
         pool_tenure = list(rawData['Time_On_Bench'])
     else:
